@@ -1,0 +1,30 @@
+﻿@model lab3.Models.Friend
+
+@{
+    ViewBag.Title = "EditFriend";
+}
+
+<h2>EditFriend</h2>
+
+@using (Html.BeginForm("EditFriend", "Friend"))
+{
+    @Html.HiddenFor(f=>f.friendId)
+
+    <div class="form-group">
+        @Html.LabelFor(f => f.friendId)
+        @Html.TextBoxFor(f => f.friendId, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(f => f.name)
+        @Html.TextBoxFor(f => f.name, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(f => f.place)
+        @Html.TextBoxFor(f => f.place, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="reset" class="btn btn-danger"> @Html.ActionLink("Back", "FriendTable")</button>
+}

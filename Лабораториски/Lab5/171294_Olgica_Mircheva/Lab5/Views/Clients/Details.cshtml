@@ -1,0 +1,58 @@
+﻿@model Lab5.Models.Client
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.clientName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clientName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clietnAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clietnAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clientPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clientPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clientMembership)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clientMembership)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clientAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clientAge)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.clientId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

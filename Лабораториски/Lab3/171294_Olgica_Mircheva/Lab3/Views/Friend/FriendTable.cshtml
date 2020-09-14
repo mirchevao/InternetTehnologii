@@ -1,0 +1,39 @@
+﻿@model lab3.Models.FriendList
+
+@{
+    ViewBag.Title = "Friends";
+}
+
+<h2>Friends</h2>
+
+@{ 
+    int i = 0;
+    <table style="padding: 2px; border:solid">
+        <tr style="padding:2px; border:solid">
+            <td style="padding: 2px; border: solid">Friend ID</td>
+            <td style="padding:2px; border: solid">Friend Name</td>
+            <td style="padding: 2px; border:solid">Place</td>
+            <td style="padding: 2px; border:solid"></td>
+            
+            
+        </tr>
+
+     @foreach(var friend in Model.friends)
+     {
+         <tr style="padding: 2px; border: solid">
+             <td style="padding: 2px; border:solid">@friend.friendId</td>
+             <td style="padding: 2px; border:solid">@friend.name</td>
+             <td style="padding: 2px; border:solid">@friend.place</td>
+             <td style="padding: 2px; border:solid">
+                 <button style="color:black; background-color: blue">@Html.ActionLink("Edit", "EditFriend", new { id = i })</button>
+                 <button style="color:black; background-color: red">@Html.ActionLink("Delete", "DeleteFriend", new { id = i })</button>
+             </td>
+         </tr>
+         i++;
+
+     }
+        
+    </table>
+
+
+}

@@ -1,0 +1,25 @@
+﻿@model Lab5.Models.AddUser
+@{
+    ViewBag.Title = "AddUserView";
+}
+
+<h2>AddUserView</h2>
+
+@using (Html.BeginForm("AddUser", "Account"))
+{
+    <div class="form-group">
+        @Html.LabelFor(model => model.email, new { @class = "control-label" })
+        @Html.TextBoxFor(model => model.email, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.select, new { @class = "control-label" })
+        @Html.DropDownListFor(model => model.select, new SelectList(Model.roles), new {@class = "form-control"})
+    </div>
+
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Add"/>
+    </div>
+
+}
+

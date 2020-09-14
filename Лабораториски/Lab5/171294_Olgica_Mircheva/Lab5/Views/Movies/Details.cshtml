@@ -1,0 +1,50 @@
+﻿@model Lab5.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.movieName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.movieName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.raiting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.raiting)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.downloadUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.downloadUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imageUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imageUrl)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.movieId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
